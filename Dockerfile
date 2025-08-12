@@ -20,7 +20,7 @@ RUN npm run build -- --configuration production
 FROM nginx:latest
 
 # Copiar el build de Angular desde la etapa anterior a la carpeta de Nginx
-COPY --from=build /app/dist/frontend-ferreteria /usr/share/nginx/html
+COPY --from=build /app/dist/ferreteria-ucb /usr/share/nginx/html
 
 # Copiar configuración personalizada de Nginx (opcional)
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
